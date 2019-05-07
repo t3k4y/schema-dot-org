@@ -5,15 +5,19 @@ module SchemaDotOrg
     attr_accessor :author,
                   :content_url,
                   :name,
-                  :thumbnail_url
+                  :thumbnail_url,
+                  :identifier
 
     def _to_json_struct
-      {
+      struct = {
         "author"        => author.to_json_struct,
         "contentUrl"    => content_url,
         "name"          => name,
-        "thumbnailUrl"  => thumbnail_url
+        "thumbnailUrl"  => thumbnail_url,
       }
+      struct["identifier"] = identifier if identifier
+
+      struct
     end
   end
 end
