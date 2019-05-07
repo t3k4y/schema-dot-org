@@ -19,6 +19,8 @@ module SchemaDotOrg
                   :address,
                   :telephone
 
+    # TODO create postal address class
+    # validates :address,           type: SchemaDotOrg::PostalAddress
     validates :email,             type: String
     validates :founder,           type: SchemaDotOrg::Person, allow_nil: true
     validates :founding_date,     type: Date, allow_nil: true
@@ -34,7 +36,7 @@ module SchemaDotOrg
         "email" => email,
         "url" => url,
         "logo" => logo,
-        "address" => address,
+        "address" => address.is_a?(SchemaDotOrg::Place) ? address.to_json_struct : address,
         "telephone" => telephone
       }
       struct["founder"] = founder.to_json_struct if founder
