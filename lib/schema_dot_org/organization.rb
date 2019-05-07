@@ -36,13 +36,15 @@ module SchemaDotOrg
         "email" => email,
         "url" => url,
         "logo" => logo,
-        "address" => address.is_a?(SchemaDotOrg::Place) ? address.to_json_struct : address,
+        # "address" => address.is_a?(SchemaDotOrg::PostalAddress) ? address.to_json_struct : address,
+        "address" => address,
         "telephone" => telephone
       }
       struct["founder"] = founder.to_json_struct if founder
       struct["foundingDate"] = founding_date.to_s if founding_date
       struct["foundingLocation"] = founding_location.to_json_struct if founding_location
       struct["sameAs"] = same_as if same_as
+
       struct
     end
   end
