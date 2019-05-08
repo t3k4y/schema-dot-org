@@ -11,7 +11,7 @@ require 'schema_dot_org/photograph'
 Organization = SchemaDotOrg::Organization
 Person       = SchemaDotOrg::Person
 Place        = SchemaDotOrg::Place
-Photography  = SchemaDotOrg::Photograph
+Photograph   = SchemaDotOrg::Photograph
 ImageObject  = SchemaDotOrg::ImageObject
 
 
@@ -19,7 +19,7 @@ RSpec.describe Photograph do
   describe "#new" do
     it 'will not create with an unknown attribute' do
       expect do
-        Photography.new(
+        Photograph.new(
           author:             'today',
           descr:              "get me wrong"
           )
