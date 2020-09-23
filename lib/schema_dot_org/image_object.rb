@@ -17,7 +17,7 @@ module SchemaDotOrg
         'name' => name,
         'thumbnailUrl' => thumbnail_url,
         'license' => license,
-        'aquireLicensePage' => acquire_license_page
+        'acquireLicensePage' => acquire_license_page
       }
       struct['identifier'] = identifier if identifier
 

@@ -68,7 +68,7 @@ RSpec.describe Photograph do
           'name' => 'Beach in Mexico',
           'thumbnailUrl' => 'mexico-beach_sm.jpg',
           'license' => 'donotpublishholidaypix-license',
-          'aquireLicensePage' => 'https://www.holiday.pix/aquire'
+          'acquireLicensePage' => 'https://www.holiday.pix/aquire'
         },
         'author' => {
           '@type' => 'Person',
