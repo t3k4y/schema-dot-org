@@ -6,16 +6,20 @@ module SchemaDotOrg
                   :content_url,
                   :name,
                   :thumbnail_url,
-                  :identifier
+                  :identifier,
+                  :license,
+                  :acquire_license_page
 
     def _to_json_struct
       struct = {
-        "author"        => author.to_json_struct,
-        "contentUrl"    => content_url,
-        "name"          => name,
-        "thumbnailUrl"  => thumbnail_url,
+        'author' => author.to_json_struct,
+        'contentUrl' => content_url,
+        'name' => name,
+        'thumbnailUrl' => thumbnail_url,
+        'license' => license,
+        'aquireLicensePage' => acquire_license_page
       }
-      struct["identifier"] = identifier if identifier
+      struct['identifier'] = identifier if identifier
 
       struct
     end
